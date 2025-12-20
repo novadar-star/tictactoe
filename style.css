@@ -1,0 +1,28 @@
+*{
+    background-color: #afefc0;
+}
+body{
+    margin: 0;
+}
+.tictac{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tictac>.box{
+    flex: 1 1 40%;  
+    height: 100px;
+}
+.box{
+    padding: 3rem;
+    margin-top:0.2rem;
+      margin-left:0.2rem;
+    border:2px solid white;
+    border-radius:0.4rem;
+    cursor: pointer;
+    background-color:#f18197;
+}
+.box:hover{
+    color: white;
+}

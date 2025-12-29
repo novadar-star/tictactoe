@@ -32,6 +32,7 @@ body{
     padding: 0.5rem;
   
 }
+
 .box{
     padding: 2rem;
     margin-top:0.2rem;
@@ -41,6 +42,28 @@ body{
     cursor: pointer;
     background-color:#f18197;
 }
+
+
 .box:hover{
     color: white;
+}
+
+.tictac{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    grid-gap:10px;
+
+}
+/* frame this into a 3 layer and fix the color*/
+.tictac > button{
+    padding:10px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    border:1px solid black;
+}
+button{
+    border:1px solid black ;
+
 }

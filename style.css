@@ -48,7 +48,7 @@ body{
     margin-top: 1rem;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    grid-gap:10px;
+    grid-gap:8px;
 
 }
 /* frame this into a 3 layer and fix the color*/
@@ -67,5 +67,5 @@ button{
     transform: scale(1.1);
 }
 .box{
-     transition: all 0.4s;
+     transition: all 0.3s;
 }

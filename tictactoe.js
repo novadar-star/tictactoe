@@ -12,3 +12,12 @@ for(const i = 0; i<3; i++){
      console.log(" " + items[i][j])
 
 }
+
+const button = document.querySelector("button");
+const img = document.getElementById("image-x")
+
+document.addEventListener("mouseover", mouseover);
+
+function mouseover(){
+    
+}

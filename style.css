@@ -35,7 +35,7 @@ body{
 
 .box{
     cursor: pointer;
-    background-color:#f18197;
+    background-color:#eae1e3;
 }
 
 
@@ -48,24 +48,27 @@ body{
     margin-top: 1rem;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    grid-gap:8px;
+    grid-gap:1.9rem;
 
 }
 /* frame this into a 3 layer and fix the color*/
 .tictac > button{
-    padding:10px;
-    border-radius: 5px;
+    padding: 3.8rem;
+    border-radius: 0.7rem;
     display: grid;
     place-items: center;
-    border:1px solid black;
+    border:0.1rem solid rgb(132, 129, 129);
+
 }
 button{
-    border:1px solid black ;
+    border:1rem solid black ;
 
 }
 .box:hover{
     transform: scale(1.1);
+    border:0.2rem solid rgb(132, 129, 129);
+
 }
 .box{
-     transition: all 0.3s;
+    transition: all 0.3s;
 }

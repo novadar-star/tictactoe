@@ -1,9 +1,31 @@
 //create a 3 by 3 matrix by row and col usig 2d arrays
 
-const board = document.querySelector("tictac");
+//const board = document.querySelector("tictac");
 
 const gameBoard = (() =>{
-    let gameboard = ["","", "","","", "","","", ""]
+    let gameboard = ["","", "","","", "","","", ""];
+
+  const show = () =>{
+    let board = "";
+    gameboard.forEach((square, index) => {
+        board+= `<button class="box">${square}</button>`;
+    })
+
+  }
+  document.querySelector("#gameboard").innerHTML = board;
+
+  return {
+     show,
+  }
+})();
+
+//create an arrow function for the game itself then assign it to a var
+
+const  Game = (() =>{
+    let players = [];
+    let currentplayerindex = 0;
+    let gameend = false;
+
 })
 const winpatterns = [
     [0,1,2],

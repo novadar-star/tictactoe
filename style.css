@@ -23,8 +23,8 @@ body{
 .turn{
     padding:0.2rem;
     text-align: center;  
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .counter-turn{
     border: 2px solid rgb(95 97 110);
@@ -39,9 +39,6 @@ body{
 }
 
 
-.box:hover{
-    color: white;
-}
 
 .tictac{
     display: grid;

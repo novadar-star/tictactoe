@@ -25,7 +25,7 @@ const text = document.querySelectorAll("h1");
 
 tictacbutton.forEach(button =>{
     button.addEventListener("click", function(e){
-        e.style.innerText = "X";
+        e.target.innerText = "X";
     })
 })
 /*

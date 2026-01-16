@@ -1,21 +1,32 @@
 //create a 3 by 3 matrix by row and col usig 2d arrays
 
-//const board = document.querySelector("tictac");
-
+//gameboard object controlling the flow of the gme
 const Gameboard = (()=> {
     let board = ["","", "","","", "","","", ""];
 
     const render = () => {
-    const gameboard = document.querySelector(".gameboard")
-    gameboard.innerHTML = "";
+        const gameboard = document.querySelector(".gameboard")
+        gameboard.innerHTML = "";
 
-        board.forEach((box, index) => {
+            board.forEach((value, index) => {
+                const box = document.createElement("div");
+                box.classList.add("box")
+                box.id = index;
+                box.textContent = value;
+                box.addEventListener("click", Game.handleClick)
+                gameboard.appendChild(box);
 
 
         })
-    })
+    }
 
 
+
+    const reset = () => {
+        board = ["","", "","","", "","","", ""];
+
+    }
+})();
 
 /*
 const gameBoard = (() =>{

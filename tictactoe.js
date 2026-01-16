@@ -20,7 +20,14 @@ const Gameboard = (()=> {
         })
     }
 
-
+//once user click, a mar of either X or O
+const setMark = (index, mark) => {
+    if(board[index] === ""){ //if its empty u can mark on it
+        board[index] = mark;
+        return true;
+    }
+    return false;
+}
 
     const reset = () => {
         board = ["","", "","","", "","","", ""];

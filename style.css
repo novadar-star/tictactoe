@@ -66,3 +66,20 @@ body{
 .box{
     transition: all 0.3s;
 }
+
+.control{
+    display: flex;
+    margin:10rem;
+    justify-content: center;
+    gap:1rem;
+}
+
+#start, #restart{
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+#start:hover, #restart:hover{
+    padding: 1.2rem;
+}

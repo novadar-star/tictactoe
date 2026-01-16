@@ -2,6 +2,22 @@
 
 //const board = document.querySelector("tictac");
 
+const Gameboard = (()=> {
+    let board = ["","", "","","", "","","", ""];
+
+    const render = () => {
+    const gameboard = document.querySelector(".gameboard")
+    gameboard.innerHTML = "";
+
+        board.forEach((box, index) => {
+
+
+        })
+    })
+
+
+
+/*
 const gameBoard = (() =>{
     let gameboard = ["","", "","","", "","","", ""];
 
@@ -105,7 +121,7 @@ tictacbutton.forEach(button =>{
         e.target.innerText = "X";
     })
 })
-
+*/
 /*generate math random*/
 
 

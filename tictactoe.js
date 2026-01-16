@@ -24,8 +24,12 @@ const gameBoard = (() =>{
 const  Game = (() =>{
     let players = [];
     let currentplayerindex = 0;
-    let gameend = false;
+    let gameEnd = false;
 
+
+    const start= () => {
+        players
+    }
 })
 const winpatterns = [
     [0,1,2],
@@ -52,6 +56,8 @@ else{
     player = 1;
 }
 }
+
+
 /*
 function screenControl(){
     const gamesession = GameController();

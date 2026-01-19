@@ -45,3 +45,9 @@ button:hover{
    background-color: #f08494;
    color:whitesmoke;
 }
+
+.box{
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(1, fr);
+}

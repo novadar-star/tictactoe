@@ -15,8 +15,6 @@ const Gameboard = (()=> {
                 box.textContent = value;
                 box.addEventListener("click", Game.handleClick)
                 gameboard.appendChild(box);
-
-
         })
     }
 
@@ -33,8 +31,123 @@ const setMark = (index, mark) => {
         board = ["","", "","","", "","","", ""];
 
     }
+
+    const getBoard = () => board;
+
+    return {
+        render, setMark, reset, getBoard
+    }
+
 })();
 
+
+const createPlayer = (name, mark) => {
+    return {
+        name, mark
+    };
+};
+
+const Game = (()=>{
+    let players = [];
+    let currentplayerIndex = 0;
+    let gameOver = false;
+
+    const message = document.querySelector("#message")
+
+    const start = () =>{
+        players = [
+            createPlayer(player1.value || "Player 1", "X"),
+            createPlayer(player2.value || "Player 2", "O")
+        ];
+
+        currentplayerIndex = 0;
+        gameOver = false;
+        message.textContent = players[0].name + "'s turn (X)";
+        Gameboard.reset() //atach the functionr eset
+        Gameboard.render();
+
+
+    };
+
+    const handleClick = (event) => {
+        if(gameOver) return; //if gameover becomes true then return
+        const index = event.target.id;
+        const currentPlayer = players[currentplayerIndex];
+
+        if(!Gameboard.setMark(index, currentPlayer.mark)) return; //dont understand this
+
+        Gameboard.render();
+
+        if(checkWinner()){
+            message.textContent= currentPlayer.name + "wins!! yay!";
+            gameOver = true;
+            return;
+        }
+
+        if(checkDraw()){
+            message.textContent = "its a draw";
+            gameOver= true;
+            return;
+        }
+
+        switchPlayer();
+        message.textContent = players[currentPlayerIndex].name+ "'s turn (" 
+        + players[currentplayerIndex].mark + ")";
+
+    };
+
+    const switchPlayer = () => {
+        if (currentplayerIndex === 0) {
+            currentplayerIndex = 1;
+        } else {
+            currentplayerIndex = 0;
+        }
+    };
+
+    const checkWinner = () => {
+        const board = Gameboard.getBoard();
+        const mark = players[currentplayerIndex].mark;
+
+
+        if(board[0] === mark && board[1] === mark && board[2]=== mark ||
+        board[0] === mark && board[3] === mark && board[6]=== mark ||
+        board[0] === mark && board[4] === mark && board[8]=== mark ||
+        board[1] === mark && board[4] === mark && board[7]=== mark ||
+        board[2] === mark && board[4] === mark && board[6]=== mark ||
+        board[2] === mark && board[5] === mark && board[8]=== mark ||
+        board[3] === mark && board[4] === mark && board[5]=== mark ||
+        board[6] === mark && board[7] === mark && board[8]=== mark 
+        ) {
+            return true;
+        }
+        return false;
+    };
+
+    const checkDraw = () => {
+        const board = Gameboard.getBoard();
+        let filled = 0;
+
+        board.forEach(cell => {
+            if(cell !== ""){
+                filled++;
+            }
+        });
+
+        if(filled === 9){
+            return true;
+        }
+        return false;
+    };
+
+    return{
+        start, handleClick
+    };
+
+
+})();
+
+document.querySelector("#start").addEventListener("click", Game.start);
+document.querySelector("#restart").addEventListener("click", Game.start);
 /*
 const gameBoard = (() =>{
     let gameboard = ["","", "","","", "","","", ""];

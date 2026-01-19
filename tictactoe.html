@@ -25,14 +25,21 @@
     <div class="turn">
         <div class="counter-turn">
              <h4 class = "turn">Current Turn: </h4>
+             <h5 id="message"></h5>
         </div>      
     </div>
 
     <!--LAYOUT BOARD-->
-    <div class="gameboard">
+    <div class="outer-gameboard">
+          <div class="gameboard">
     </div>
+    </div>
+  
     <!--controls-->
     <div class="control">
+        <input type="text" id="player1" placeholder="Player 1 Name">
+        <input type="text" id="player2" placeholder="Player 2 Name">
+
         <button id="start">START</button>
         <button id="restart">RESTART</button>
     </div>

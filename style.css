@@ -4,7 +4,7 @@
 body{
     margin-top:1.2rem;
 }
-.tictac{
+.outer-gameboard{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -40,8 +40,9 @@ body{
 
 
 
-.tictac{
+.gameboard{
     display: grid;
+    
     margin-top: 1rem;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
@@ -49,7 +50,7 @@ body{
 
 }
 /* frame this into a 3 layer and fix the color*/
-.tictac > button{
+.tictac > div{
     padding: 3.8rem;
     border-radius: 0.7rem;
     display: grid;

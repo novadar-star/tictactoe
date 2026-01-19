@@ -9,3 +9,18 @@ h2{
     font-size: 2.5rem;
 
 }
+
+.textbox{
+    display: flex;
+    justify-content: center;
+    gap:0.5em;
+    border-radius: 0.3rem;
+}
+
+input[type=text]{
+   border-radius: 0.3rem;
+}
+
+label {
+    margin-right:0.2em;
+}
